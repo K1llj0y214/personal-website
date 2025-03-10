@@ -599,8 +599,10 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
+  min-width: clamp(5rem, calc(10vw + 2rem), 15rem);
   height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .img-thumbnail {
