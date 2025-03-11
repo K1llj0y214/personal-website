@@ -143,6 +143,11 @@ h2, .h2 {
     font-size: 2rem;
   }
 }
+@media (max-width: 767.98px) {
+  h2, .h2 {
+    text-align: center;
+  }
+}
 
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
@@ -605,6 +610,19 @@ progress {
 }
 
 .img-fluid {
+  min-width: clamp(5rem, calc(10vw + 2rem), 15rem);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  .img-fluid {
+    width: 15rem;
+  }
+}
+
+.img-fluid-non-adaptive {
   min-width: clamp(5rem, calc(10vw + 2rem), 15rem);
   height: auto;
   aspect-ratio: 1 / 1;
@@ -7045,6 +7063,14 @@ textarea.form-control-lg {
 
 .d-none {
   display: none !important;
+}
+
+@media (max-width: 767.98px) {
+  .d-tight-flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 
 .shadow {
